@@ -1,0 +1,34 @@
+{
+    "name": "frosty-games",
+    "preductname": "Frosty Games",
+    "version": "0.0.1",
+    "description": "Frosty Games",
+    "main": "main.js",
+    "author": "Frosty Games",
+    "license": "https://github.com/Frosty-Games-Dev/Launcher/blob/main/LICENSE.md",
+    "scripts": {
+        "start": "cross-env-shell NODE_ENV=dev electron .",
+        "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
+        "dist": "electron-builder"
+    },
+    "build": {
+        "appId": "com.frosty.app",
+        "publish": []
+    },
+    "nodemonConfig": {
+        "ext": "js,html,css",
+        "ignore": "**/test"
+    },
+    "devDependencies": {
+        "cross-env": "^10.1.0",
+        "electron": "^40.1.0",
+        "electron-builder": "^26.7.0",
+        "nodemon": "^3.1.11"
+    },
+    "dependencies": {
+        "electron-updater": "^6.7.3",
+        "glob": "^13.0.0",
+        "lru-cache": "^11.2.5",
+        "rimraf": "^6.1.2"
+    }
+}

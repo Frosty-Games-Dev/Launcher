@@ -1,0 +1,343 @@
+body {
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    color: white;
+}
+
+.background-color {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(135deg, #1a0933, #342f81, #1c1b3a);
+    border-radius: 15px;
+    position: fixed;
+}
+
+.dragbar {
+    position: fixed;
+    width: 90%;
+    height: 8%;
+    right: 0%;
+    top: 0%;
+    -webkit-app-region: drag;
+    background: rgba(255, 255, 255, 0);
+}
+
+.icon-minimize {
+    background: url('../../../assets/icons/btn_minimize_app.png'), no-repeat;
+    background-size: 100%;
+    width: 36px;
+    height: 36px;
+    position: fixed;
+    top: 0%;
+    left: 92%;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+    border: none;
+    border-radius: 5px;
+}
+
+.icon-minimize:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.icon-close {
+    background: url('../../../assets/icons/btn_close_app.png'), no-repeat;
+    background-size: 100%;
+    width: 36px;
+    height: 36px;
+    position: fixed;
+    top: 0%;
+    left: 96%;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+    border: none;
+    border-radius: 5px;
+}
+
+.icon-close:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.bar-left {
+    position: fixed;
+    width: 10%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.icon-user {
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    top: 9%;
+    left: 32%;
+}
+
+.icon-home {
+    background: url('../../../assets/icons/icon_sms.png'), no-repeat;
+    background-size: 100%;
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    top: 24%;
+    left: 32%;
+    cursor: pointer;
+    border: none;
+}
+
+.icon-home1 {
+    background: url('../../../assets/icons/icon_news.png'), no-repeat;
+    background-size: 100%;
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    top: 39%;
+    left: 32%;
+    cursor: pointer;
+    border: none;
+}
+
+.icon-home2 {
+    background: url('../../../assets/icons/btn_game.png'), no-repeat;
+    background-size: 100%;
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    top: 54%;
+    left: 32%;
+    cursor: pointer;
+    border: none;
+}
+
+.icon-home3 {
+    background: url('../../../assets/icons/btn_game.png'), no-repeat;
+    background-size: 100%;
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    top: 69%;
+    left: 32%;
+    cursor: pointer;
+    border: none;
+}
+
+.icon-setting {
+    background: url('../../../assets/icons/btn_setting.png'), no-repeat;
+    background-size: 100%;
+    opacity: 100%;
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    top: 84%;
+    left: 32%;
+    cursor: pointer;
+    border: none;
+}
+
+.news-zone {
+    position: fixed;
+    top: 15%;
+    left: 70%;
+    width: 30%;
+    height: 75%;
+    background: transparent;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.news-zone::-webkit-scrollbar {
+    width: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.news-zone::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+}
+
+.news {
+    cursor: pointer;
+    user-select: none;
+}
+
+.news:hover {
+    opacity: 50%;
+}
+
+.news-title {
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: rgb(220, 220, 220);
+    text-align: left;
+    font-size: 17px;
+    font-weight: 550;
+    word-break: break-word;
+    box-sizing: border-box;
+    ;
+    user-select: none;
+}
+
+.news-publish_date {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(200, 200, 200);
+    user-select: none;
+}
+
+.news-separation {
+    width: 100%;
+    height: 0.5%;
+    background-color: rgb(150, 150, 150);
+    user-select: none;
+    cursor: default;
+}
+
+.news-box-2 {
+    position: fixed;
+    top: 15%;
+    left: 15%;
+    width: 75%;
+    height: 75%;
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom-left-radius: 16px;
+    border-top-left-radius: 16px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow-y: auto;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+}
+
+.news-box-2::-webkit-scrollbar {
+    width: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.news-box-2::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+}
+
+.btn-news-box {
+    background: url('../../../assets/icons/btn_close_app.png'), no-repeat;
+    background-size: 100%;
+    width: 36px;
+    height: 36px;
+    position: fixed;
+    top: 18%;
+    left: 85%;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-news-box:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.news-box-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(220, 220, 220);
+    padding-top: 4%;
+    padding-left: 3%;
+    padding-right: 6%;
+}
+
+.news-box-content {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(220, 220, 220);
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 6%;
+}
+
+.news-box-date {
+    text-align: right;
+    font-size: 18px;
+    font-weight: 550;
+    color: rgb(220, 220, 220);
+    padding-right: 6%;
+}
+
+.news-box-author {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 550;
+    color: rgb(220, 220, 220);
+    padding-left: 3%;
+}
+
+.btn-play {
+    position: fixed;
+    background-color: rgba(23, 174, 149, 0);
+    border: 3px solid;
+    border-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    width: 120px;
+    height: 50px;
+    top: 50%;
+    left: 15%;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 900;
+    text-align: right;
+    cursor: pointer;
+}
+
+.icon-play {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 50.8%;
+    left: 15.5%;
+}
+
+.text-title-game {
+    font-size: 30px;
+    font-weight: 900;
+    color: rgb(255, 255, 255, 0.8);
+    position: fixed;
+    top: 15%;
+    left: 35%;
+}
+
+.version-game {
+    font-size: 15px;
+    font-weight: 900;
+    color: rgb(255, 255, 255, 0.8);
+    position: fixed;
+    top: 50%;
+    left: 28%;
+}
+
+.recent-games {
+    position: fixed;
+    background: transparent;
+    width: 50%;
+    height: 33%;
+    top: 17%;
+    left: 15%;
+}
