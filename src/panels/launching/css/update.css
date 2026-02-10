@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300..700&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.main-content {
+    background-color: rgba(0, 2, 69, 1);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    border-radius: 10px;
+}
+
+.dragbar {
+    position: fixed;
+    width: 88%;
+    height: 8%;
+    background-color: rgba(255, 0, 0, 0);
+    border-top-left-radius: 10px;
+    -webkit-app-region: drag;
+
+}
+
+.close-win {
+    position: fixed;
+    background: url('../../../assets/icons/btn_close_app.png'), no-repeat;
+    background-size: 100%;
+    width: 35px;
+    height: 35px;
+    top: 2%;
+    left: 88%;
+    opacity: 0.5;
+}
+
+.close-win:hover {
+    opacity: 1;
+}
+
+.logo {
+    position: fixed;
+    background: url('../../../assets/logo/logo_frost_017.png'), no-repeat;
+    background-size: 100%;
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 25%;
+}
+
+.title {
+    position: fixed;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    top: 50%;
+    left: 24%;
+}
+
+.text-info {
+    position: fixed;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgb(190, 190, 190);
+    margin: 0px;
+    padding: 0px;
+    top: 87%;
+    left: 21%;
+}

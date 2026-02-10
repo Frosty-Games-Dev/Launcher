@@ -2,6 +2,7 @@ const { app, ipcMain, BrowserWindow } = require("electron");
 //const { autoUpdater } = require('electron-updater'); /* Non utile pour le moment */
 const path = require("path");
 
+let winUpdate = undefined;
 let winLogin = undefined;
 let winHome = undefined;
 
@@ -10,6 +11,26 @@ let winHome = undefined;
 let winLiteHeight = undefined;
 let winBigWidth = undefined;
 let winBigHeight = undefined;*/
+
+// Fenêtre pour la partie "launching"
+function createWinLaunch() {
+    winUpdate = new BrowserWindow({
+        width: 400,
+        height: 490,
+        resizable: false,
+        transparent: true,
+        frame: false,
+        icon: path.join(__dirname, 'src/assets/logo/logo_frost_017.png'),
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false
+        },
+    });
+
+    winUpdate.loadFile("src/panels/launching/html/update.html");
+    winUpdate.setMenuBarVisibility(false);
+    //winUpdate.webContents.openDevTools({ mode: 'detach' });
+}
 
 // Fenêtre pour la partie "login"
 function createWinLogin() {
@@ -28,7 +49,7 @@ function createWinLogin() {
 
     winLogin.loadFile("src/panels/connection/html/login.html");
     winLogin.setMenuBarVisibility(false);
-    winLogin.webContents.openDevTools({ mode: 'detach' });
+    //winLogin.webContents.openDevTools({ mode: 'detach' });
 }
 
 // Fenêtre pour la partie principale
@@ -52,10 +73,10 @@ function createWinHome() {
 
 // Partie pour gérer le lancement de l'application
 app.on('ready', () => {
-    createWinLogin();
+    createWinLaunch();
 
     app.on("activate", () => {
-        if (BrowserWindow.getAllWindows().length === 0) createWinLogin();
+        if (BrowserWindow.getAllWindows().length === 0) createWinLaunch();
     });
 });
 
