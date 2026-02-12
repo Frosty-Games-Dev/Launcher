@@ -1,5 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300..700&display=swap');
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../../../assets/fonts/SpaceGrotesk-VariableFont_wght.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../../assets/fonts/Poppins-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
 
 body {
     margin: 0px;
@@ -73,5 +84,5 @@ body {
     margin: 0px;
     padding: 0px;
     top: 87%;
-    left: 21%;
+    left: 17%;
 }

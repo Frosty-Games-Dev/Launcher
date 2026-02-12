@@ -1,4 +1,4 @@
-const { BrowserWindow } = require("electron");
+const { app, BrowserWindow } = require("electron");
 const path = require("path");
 
 let winUpdate = undefined;
@@ -19,7 +19,9 @@ function createWindow() {
         frame: false,
         icon: path.join(__dirname, '../../../assets/logo/logo_frost_017.png'),
         webPreferences: {
-            preload: path.join(__dirname, '../../../../preload.js')
+            nodeIntegration: false,
+            contextIsolation: true,
+            preload: path.join(app.getAppPath(), 'preload.js')
         }
     });
 
