@@ -25,27 +25,27 @@ autoUpdater.autoDownload = false;
 autoUpdater.checkForUpdates();
 
 autoUpdater.on('checking-for-update', () => {
-    winUpdate.webContents.send('message', 'Checking for updates...');
+    console.log('checking-for-update');
 });
 
 autoUpdater.on('update-available', () => {
-    winUpdate.webContents.send('update-available');
+    console.log('update-available');
 });
 
 autoUpdater.on('update-not-available', () => {
-    winUpdate.webContents.send('message', 'No update available.');
+    console.log('update-not-available');
 });
 
 autoUpdater.on('error', (err) => {
-    winUpdate.webContents.send('message', `Error: ${err}`);
+    console.log('error');
 });
 
-autoUpdater.on('download-progress', (progressObj) => {
+/*autoUpdater.on('download-progress', (progressObj) => {
     winUpdate.webContents.send('download-progress', progressObj);
-});
+});*/
 
 autoUpdater.on('update-downloaded', () => {
-    winUpdate.webContents.send('update-downloaded');
+    console.log('update-downloaded');
 });
 
 ipcMain.handle('download', () => {
