@@ -86,3 +86,21 @@ body {
     top: 87%;
     left: 17%;
 }
+
+.start-update {
+    position: fixed;
+    top: 20%;
+    width: 80px;
+    height: 20px;
+    background-color: red;
+    cursor: default;
+}
+
+.install {
+    position: fixed;
+    top: 30%;
+    width: 60px;
+    height: 20px;
+    background-color: red;
+    cursor: default;
+}

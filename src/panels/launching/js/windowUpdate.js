@@ -9,6 +9,10 @@ function destroyWindow() {
     winUpdate = undefined;
 }
 
+function getWindow() {
+    return winUpdate
+}
+
 function createWindow() {
     destroyWindow();
     winUpdate = new BrowserWindow({
@@ -32,5 +36,6 @@ function createWindow() {
 
 module.exports = {
     createWindow,
-    destroyWindow
+    destroyWindow,
+    getWindow
 };
