@@ -1,7 +1,7 @@
 {
     "name": "frosty-games",
     "preductname": "Frosty Games",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Frosty Games",
     "main": "main.js",
     "author": "Frosty Games",
