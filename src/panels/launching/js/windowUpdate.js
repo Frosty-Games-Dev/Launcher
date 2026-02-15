@@ -1,7 +1,7 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
 
-let winUpdate = undefined;
+let winUpdate;
 
 function destroyWindow() {
     if (!winUpdate) return;

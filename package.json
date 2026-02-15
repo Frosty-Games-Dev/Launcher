@@ -1,7 +1,7 @@
 {
     "name": "frosty-games",
     "preductname": "Frosty Games",
-    "version": "0.0.2",
+    "version": "0.0.1",
     "description": "Frosty Games",
     "main": "main.js",
     "author": "Frosty Games",
@@ -16,8 +16,7 @@
         "publish": [
             {
                 "provider": "github",
-                "owner": "Frosty-Games-Dev",
-                "repo": "Launcher"
+                "releaseType": "release"
             }
         ]
     },
@@ -33,5 +32,9 @@
     },
     "dependencies": {
         "electron-updater": "^6.7.3"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Frosty-Games-Dev/Launcher.git"
     }
 }

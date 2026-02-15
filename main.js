@@ -3,12 +3,40 @@ const { autoUpdater } = require('electron-updater'); /* Non utile pour le moment
 const path = require("path");
 
 const LaunchingWindow = require("./src/panels/launching/js/windowUpdate.js");
+//const UpdateWindow = require("./src/panels/launching/js/windowUpdate.js");
 const winUpdate = LaunchingWindow.getWindow();
-
 
 // Partie pour gérer le lancement de l'application
 app.on('ready', () => {
-    LaunchingWindow.createWindow()
+    LaunchingWindow.createWindow();
+
+    autoUpdater.checkForUpdates();
+
+    autoUpdater.on('checking-for-update', () => {
+    });
+
+    autoUpdater.on('update-available', () => {
+    });
+
+    autoUpdater.on('update-not-available', () => {
+    });
+
+    autoUpdater.on('error', (err) => {
+    });
+
+    autoUpdater.on('update-downloaded', () => {
+    });
+
+    ipcMain.handle('download', () => {
+        console.log('download');
+        //winUpdate.webContents.send('message', 'Checking for updates...');
+        autoUpdater.downloadUpdate();
+    });
+
+    ipcMain.handle('install', () => {
+        console.log('install');
+        autoUpdater.quitAndInstall();
+    });
 });
 
 // Fermer l'application si aucune fenêtre n'est ouverte (pas utile pour MacOS)
@@ -22,7 +50,7 @@ ipcMain.handle('destroy-window', () => {
 
 autoUpdater.autoDownload = false;
 
-autoUpdater.checkForUpdates();
+/*autoUpdater.checkForUpdates();
 
 autoUpdater.on('checking-for-update', () => {
     console.log('checking-for-update');
@@ -39,11 +67,6 @@ autoUpdater.on('update-not-available', () => {
 autoUpdater.on('error', (err) => {
     console.log('error');
 });
-
-/*autoUpdater.on('download-progress', (progressObj) => {
-    winUpdate.webContents.send('download-progress', progressObj);
-});*/
-
 autoUpdater.on('update-downloaded', () => {
     console.log('update-downloaded');
 });
@@ -56,4 +79,22 @@ ipcMain.handle('download', () => {
 ipcMain.handle('install', () => {
     console.log('install');
     autoUpdater.quitAndInstall();
+});*/
+
+/*autoUpdater.on('download-progress', (progressObj) => {
+    winUpdate.webContents.send('download-progress', progressObj);
+});*/
+
+/*autoUpdater.on('update-downloaded', () => {
+    console.log('update-downloaded');
 });
+
+ipcMain.handle('download', () => {
+    console.log('download');
+    autoUpdater.downloadUpdate();
+});
+
+ipcMain.handle('install', () => {
+    console.log('install');
+    autoUpdater.quitAndInstall();
+});*/
